@@ -1,32 +1,12 @@
-# Prerequisites
-*.d
+#include "mbed.h"
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+DigitalOut led1(LED1);
 
-# Precompiled Headers
-*.gch
-*.pch
+// main() runs in its own thread in the OS
+int main() {
+    while (true) {
+        led1 = !led1;
+        wait(0.5);
+    }
+}
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
